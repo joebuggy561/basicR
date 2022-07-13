@@ -1,0 +1,26 @@
+---
+title: "rstudio"
+output: html_document
+date: '2022-04-06'
+---
+
+
+```{r}
+x <- rnorm(100)
+y <- 2 + 3 * x + rnorm(100) * 0.5
+str(x)
+str(y)
+```
+
+```{r}
+x <- rnorm(100)
+y <- 2 + 3 * x + rnorm(100) * 0.5
+model1 <- lm(y~x)
+summary(model1)
+```
+
+```{r}
+plot(x, y, main = "Simple linear regression")
+abline(model1$coefficients, col = "blue")
+```
+
